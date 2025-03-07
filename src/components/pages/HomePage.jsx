@@ -1,26 +1,25 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './index.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Hero from './components/Home/Hero';
-import SearchForm from './components/Home/SearchForm';
-import Features from './components/Home/Features';
-import HowItWorks from './components/Home/HowitWork';
-import FAQ from './components/Home/FAQItem';
-import CTA from './components/Home/CTA';
-import PartnerBanks from './components/Home/PartnerBanks';
-import ComparisonResults from './components/Home/ComparisonResults';
-import Testimonials from './components/Home/Testimonial';
-import GoldLoanProducts from './components/Home/GoldLoanProducts';
-import GoldCreditCardBanner from './components/Home/GoldCreditCardBanner';
-import GoldLoanSlider from './components/Home/GoldLoanSlider';
-import LoanCalculator from './components/Home/LoanCalculator';
-import NewLoanCalculator from './components/Home/NewLoanCalculator';
+import Header from '../Header';
+import Footer from '../Footer';
+import Hero from '../Home/Hero';
+import SearchForm from '../Home/SearchForm';
+import Features from '../Home/Features';
+import HowItWorks from '../Home/HowitWork';
+import FAQ from '../Home/FAQItem';
+import CTA from '../Home/CTA';
 
-import StatsSection from './components/Home/StatsSection';
-import SectionHeading from './components/Home/SectionHeading';
-import GoldLoanBenefits from './components/Home/GoldLoanBenefits';
+import ComparisonResults from '../Home/ComparisonResults';
+import Testimonials from '../Home/Testimonial';
+import GoldLoanProducts from '../Home/GoldLoanProducts';
+import GoldCreditCardBanner from '../Home/GoldCreditCardBanner';
+import GoldLoanSlider from '../Home/GoldLoanSlider';
+import LoanCalculator from '../Home/LoanCalculator';
+import StatsSection from '../Home/StatsSection';
+import SectionHeading from '../Home/SectionHeading';
+import GoldLoanBenefits from '../Home/GoldLoanBenefits';
+import PartnerBanks from '../Home/PartnerBanks';
 
 // Animation variants for scroll effect
 const fadeInUp = {
@@ -29,9 +28,10 @@ const fadeInUp = {
 };
 
 // Main App Component
-const App = () => {
+const HomePage = () => {
   return (
     <div className="bg-gray-100 font-sans w-full flex flex-col align-center justify-center">
+      <Header />
       <Hero />
 
       <motion.div
@@ -97,10 +97,9 @@ const App = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
       >
-        <NewLoanCalculator/>
-
-        {/* <LoanCalculator /> */}
+        <LoanCalculator />
       </motion.div>
+
       <motion.div
         className="p-4"
         variants={fadeInUp}
@@ -155,14 +154,14 @@ const App = () => {
       >
         <GoldLoanBenefits />
       </motion.div>
-      {/* <motion.div
+      <motion.div
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
       >
         <ComparisonResults />
-      </motion.div> */}
+      </motion.div>
 
       <motion.div
         variants={fadeInUp}
@@ -173,8 +172,9 @@ const App = () => {
         <FAQ />
       </motion.div>
 
+      <Footer />
     </div>
   );
 };
 
-export default App;
+export default HomePage;

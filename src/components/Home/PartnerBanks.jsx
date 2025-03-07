@@ -1,25 +1,36 @@
-
+import React from "react";
 
 // Partner Banks Section Component
 const PartnerBanks = () => {
-    const banks = ["SBI", "HDFC", "ICICI", "Axis", "Muthoot", "Manappuram"];
-  
-    return (
-      <section className="bg-white py-16">
-        <div className="max-w-7xl mx-auto px-5">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-3">Our Partner Banks</h2>
-            <p className="text-gray-600">We collaborate with top banks in India to bring you the best gold loan offers</p>
-          </div>
-          <div className="flex flex-wrap justify-center gap-4">
-            {banks.map((bank, index) => (
-              <div key={index} className="w-36 h-20 bg-gray-100 flex items-center justify-center rounded-lg">
-                {bank}
-              </div>
-            ))}
-          </div>
+  const banks = [
+    { name: "SBI", logo: "https://sahibandhu.com/wp-content/uploads/2024/12/HDFC.png" },
+    { name: "HDFC", logo: "https://sahibandhu.com/wp-content/uploads/2024/12/rbl.png" },
+    { name: "ICICI", logo: "https://sahibandhu.com/wp-content/uploads/2024/12/DCB.png" },
+    { name: "Axis", logo: "https://sahibandhu.com/wp-content/uploads/2024/12/Kotak.png" },
+    { name: "Muthoot", logo: "https://sahibandhu.com/wp-content/uploads/2024/12/muthoot-finance.png" },
+    { name: "Manappuram", logo: "https://sahibandhu.com/wp-content/uploads/2024/12/KBL.png" },
+  ];
+
+  return (
+    <section className="bg-white py-16">
+      <div className="max-w-full mx-auto px-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+          {banks.map((bank, index) => (
+            <div
+              key={index}
+              className="w-[80%] h-auto bg-gray-100 flex items-center justify-center rounded-lg shadow-md transition-transform transform hover:scale-105"
+            >
+              <img
+                src={bank.logo}
+                alt={`${bank.name} logo`}
+                className="h-auto w-full object-contain"
+              />
+            </div>
+          ))}
         </div>
-      </section>
-    );
-  };
-  export default PartnerBanks
+      </div>
+    </section>
+  );
+};
+
+export default PartnerBanks;

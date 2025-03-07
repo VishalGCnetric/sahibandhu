@@ -38,13 +38,13 @@ const FAQ = () => {
     ];
   
     return (
-      <section className="bg-white py-16">
+      <section className="bg-[#0D3685] py-16">
         <div className="max-w-7xl mx-auto px-5">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-3">Frequently Asked Questions</h2>
-            <p className="text-gray-600">Get answers to common questions about gold loans</p>
+            <h2 className="text-3xl font-bold text-white mb-3">Frequently Asked Questions</h2>
+            <p className="text-white">Get answers to common questions about gold loans</p>
           </div>
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto bg-white p-4 rounded">
             {faqs.map((faq, index) => (
               <FAQItem key={index} question={faq.question} answer={faq.answer} />
             ))}

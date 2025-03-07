@@ -1,63 +1,56 @@
-// Footer Component
+import React from "react";
+import { FaWhatsapp, FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
+import { RxTwitterLogo } from "react-icons/rx";
+
 const Footer = () => {
-    return (
-      <footer className="bg-gray-800 text-white pt-16 pb-6">
-        <div className="max-w-7xl mx-auto px-5">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
-            <div>
-              <h3 className="text-xl font-bold text-yellow-500 mb-5">SahibBandhu</h3>
-              <p className="mb-6">
-                India's leading gold loan comparison portal. We help you find the best gold loan offers from top banks and financial institutions.
-              </p>
-              <div className="flex gap-4">
-                <a href="#" className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-yellow-500 transition duration-300">
-                  F
-                </a>
-                <a href="#" className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-yellow-500 transition duration-300">
-                  T
-                </a>
-                <a href="#" className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-yellow-500 transition duration-300">
-                  I
-                </a>
-                <a href="#" className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-yellow-500 transition duration-300">
-                  L
-                </a>
-              </div>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-yellow-500 mb-5">Quick Links</h3>
-              <ul className="space-y-3">
-                <li><a href="#" className="text-gray-300 hover:text-white">Home</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white">About Us</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white">Gold Loans</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white">Partner Banks</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white">Blog</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white">Contact Us</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-yellow-500 mb-5">Policies</h3>
-              <ul className="space-y-3">
-                <li><a href="#" className="text-gray-300 hover:text-white">Privacy Policy</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white">Terms & Conditions</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white">Refund Policy</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white">Sitemap</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-yellow-500 mb-5">Contact Us</h3>
-              <ul className="space-y-3">
-                <li className="text-gray-300">Email: info@sahibbandhu.com</li>
-                <li className="text-gray-300">Phone: +91 1234567890</li>
-                <li className="text-gray-300">Address: New Delhi, India</li>
-              </ul>
-            </div>
-          </div>
-          <div className="pt-8 mt-8 border-t border-gray-700 text-center text-gray-400 text-sm">
-            &copy; 2025 SahibBandhu. All rights reserved.
-          </div>
+  return (
+    <footer className="bg-white text-[#0D3685] py-10">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 px-5">
+        <div>
+        <img src="https://sahibandhu.com/wp-content/themes/sahibandhu/images/logo.png" alt="Logo" className="h-auto  w-30 my-8 mr-2 ml-20" />          <p className="text-sm">
+            SahiBandhu is India's leading gold loan platform backed by The Manipal Group. SahiBandhu offers quick and secure gold loans at affordable interest rates.
+          </p>
         </div>
-      </footer>
-    );
-  };
-  export default Footer;
+        <div>
+          <h3 className="font-semibold mb-3">Site Map</h3>
+          <ul className="text-sm space-y-2">
+            <li>Home</li>
+            <li>Transfer Gold Loan</li>
+            <li>Calculator</li>
+            <li>FAQs</li>
+            <li>About Us</li>
+            <li>Our Team</li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="font-semibold mb-3">Follow Us</h3>
+          <ul className="text-sm space-y-2">
+            <li className="flex items-center"><FaWhatsapp className="mr-2" />Whatsapp</li>
+            <li className="flex items-center"><FaInstagram className="mr-2" />Instagram</li>
+            <li className="flex items-center"><FaFacebook className="mr-2" />Facebook</li>
+            <li className="flex items-center"><RxTwitterLogo className="mr-2" />X (formerly Twitter)</li>
+            <li className="flex items-center"><FaLinkedin className="mr-2" />LinkedIn</li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="font-semibold mb-3">Contact Us</h3>
+          <p className="text-sm">
+            Corporate Office:<br />
+            Gurgaon, Haryana<br />
+            SahiBandhu FinTech Services Pvt Ltd<br />
+            Address One by Baani,<br />
+            303-308, 3rd Floor,<br />
+            Golf Course Road, Sector 56,<br />
+            Gurgaon, Haryana - 122011
+          </p>
+        </div>
+      </div>
+      <div className="text-center text-xs text-gray-500 mt-10 border-t pt-5">
+        <p>#The loan value/gm is provided based on the rates followed by one of our lending partners. This loan value is tentative.</p>
+        <p>Copyright © 2025, SahiBandhu. All rights reserved</p>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

@@ -1,0 +1,9 @@
+name = "www.sahibandhu"  # Replace with your app name
+type = "javascript"
+
+account_id = "892c15b9d7bc946fee0ed1074ecd7d7d"  # Replace with your Cloudflare account ID
+workers_dev = true
+
+[site]
+bucket = "./dist"  # Vite build output directory
+entry-point = "."
